@@ -17,7 +17,7 @@ public class 成績合計平均 {
     public static int 會計;
     public static int 地球科學;
     public static int 總分;
-    public static int 平均分數;
+    public static double 平均分數;
     
     public static void 設定初始值() {
         System.out.println("");
@@ -54,11 +54,11 @@ public class 成績合計平均 {
         System.out.println("--- 修改資料 ---");
         System.out.println("");
         名字     = "Tom";
-        國文     = 90;
-        英文     = 90;
+        國文     = 98;
+        英文     = 97;
         數學     = 100;
-        會計     = 90;
-        地球科學 = 90;       
+        會計     = 95;
+        地球科學 = 91;       
         
     }
     
@@ -71,7 +71,7 @@ public class 成績合計平均 {
     public static void 計算平均() {
         System.out.println("--- 計算平均 ---");
         System.out.println("");
-        平均分數 = 總分 / 5;        
+        平均分數 = 總分 / 5.0;        
     }
 
 }
