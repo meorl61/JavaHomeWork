@@ -16,7 +16,7 @@ public class A_Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        /*
         成績合計平均.設定初始值();
         成績合計平均.顯示資料();
         成績合計平均.修改資料();
@@ -29,7 +29,11 @@ public class A_Main {
         攝氏轉華氏.showdata();
         攝氏轉華氏.editandcalcdata();
         攝氏轉華氏.showdata();
+        */
         
+        計算BMI.設定初值();
+        計算BMI.計算();
+        計算BMI.顯示BMI();
     }
     
 }
