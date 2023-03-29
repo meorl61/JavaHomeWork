@@ -34,8 +34,9 @@ public class 攝氏轉華氏 {
 
     public static void showdata() {
         System.out.println("--- 顯示資料 ---");
-        System.out.println("攝氏溫度為: " + degree + " 度");
-        System.out.println("華氏溫度為: " + wd + " 度");
+        // °  => alt + 0176   °C °F  或直接 word 從字母符號 找 ℃ ℉ 貼上
+        System.out.println("攝氏溫度為: " + degree + " °C");
+        System.out.println("華氏溫度為: " + wd + " °F");
         System.out.println("");
     }
 
