@@ -77,17 +77,17 @@ public class 成績合計平均 {
         System.out.println("");
 
         //總分 = 國文 + 英文 + 數學 + 會計 + 地球科學
-        總分 = 工具.加總(工具.加總(工具.加總(工具.加總(國文, 英文), 數學), 會計), 地球科學);
+        int score[] = {國文, 英文, 數學, 會計, 地球科學};
+        總分 = 工具.加總(score);
 
     }
 
     public static void 計算平均() {
         System.out.println("--- 計算平均 ---");
         System.out.println("");
-        平均分數 = 總分 / 5.0;
-        double 平均分數1;
-        int score[] = {國文, 英文, 數學, 會計, 地球科學};
-        平均分數1 = 工具.平均(score);
+        //平均分數 = 總分 / 5.0;
+        int score[] = {國文, 英文, 數學, 會計, 地球科學}; //用陣列方式 匯入
+        平均分數 = 工具.平均(score);
     }
 
     public static void 評語() {

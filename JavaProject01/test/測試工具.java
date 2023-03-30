@@ -42,7 +42,9 @@ public class 測試工具 {
 
         System.out.println("~~ 測試加總工具 ~~");
         int 結果;
-        結果 = 工具.加總(x, y);
+        //結果 = 工具.加總(x, y); 用陣列方式
+        int arr[]={x,y};
+        結果 = 工具.加總(arr); //
         System.out.println("加總結果為:" + 結果);
         if (結果 == (x + y)) {
             System.out.println("測試加總成功\n");
@@ -54,7 +56,7 @@ public class 測試工具 {
     private static void 測試平均() {
         System.out.println("~~ 測試平均工具 ~~");
         double 結果;
-        int arr[] = {x, y};
+        int arr[] = {x, y};  //陣列方式
         結果 = 工具.平均(arr);
         System.out.println("平均結果為:" + 結果);
 

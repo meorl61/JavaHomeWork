@@ -29,21 +29,19 @@ public class 工具 {
         return keyword;
     }
 
-    public static int 加總(int a, int b) {
+    public static int 加總(int arr[]) {
         int c;
-        c = a + b;
-        return c;
-    }
-
-    public static double 平均(int arr[]) {
-        double c;
         c = 0;
         for (int i = 0; i < arr.length; i++) {
             c += arr[i];
         }
-
-        c = c / (arr.length * 1.0);
         return c;
+    }
+
+    public static double 平均(int arr[]) {        
+        double avg;        
+        avg = 加總(arr) / (arr.length * 1.0);
+        return avg;
     }
 
 }
