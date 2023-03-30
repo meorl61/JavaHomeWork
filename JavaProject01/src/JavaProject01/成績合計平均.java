@@ -51,18 +51,27 @@ public class 成績合計平均 {
         System.out.println("");
     }
 
-    public static void 修改資料() {
+    public static void 修改資料() {        
+        /*
         System.out.println("--- 修改資料 ---");
-        System.out.println("");
         名字 = "Tom";
         國文 = (int) (Math.random() * 101);
         英文 = (int) (Math.random() * 101);
         數學 = (int) (Math.random() * 101);
         會計 = (int) (Math.random() * 101);
         地球科學 = (int) (Math.random() * 101);
-
+        */
+        //改成輸入方式
+        System.out.println("--- 輸入資料 ---");
+        名字 = 工具.輸入文字資料 ("請輸入學生姓名: ");
+        國文 = 工具.輸入整數資料 ("請輸入國文成績: ");
+        英文 = 工具.輸入整數資料 ("請輸入英文成績: ");
+        數學 = 工具.輸入整數資料 ("請輸入數學成績: ");
+        會計 = 工具.輸入整數資料 ("請輸入會計成績: ");
+        地球科學 = 工具.輸入整數資料 ("請輸入地球科學成績: ");
+        
     }
-
+    
     public static void 計算總分() {
         System.out.println("--- 計算總分 ---");
         System.out.println("");
@@ -89,7 +98,7 @@ public class 成績合計平均 {
 
     public static void 跑流程() {
         設定初始值();
-        顯示資料();
+        //顯示資料();
         修改資料();
         計算總分();
         計算平均();
