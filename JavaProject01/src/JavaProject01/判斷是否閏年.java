@@ -7,7 +7,7 @@ package JavaProject01;
 
 /**
  *
- * @author user
+ * @author 華美娟
  */
 public class 判斷是否閏年 {
 

@@ -7,7 +7,7 @@ package JavaProject01;
 
 /**
  *
- * @author user
+ * @author 華美娟
  */
 public class 銀行帳戶 {
 

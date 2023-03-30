@@ -9,7 +9,7 @@ import java.text.DecimalFormat;
 
 /**
  *
- * @author user
+ * @author 華美娟
  */
 public class 計算BMI {
 

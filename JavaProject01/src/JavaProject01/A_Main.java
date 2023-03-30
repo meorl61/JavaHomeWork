@@ -7,7 +7,7 @@ package JavaProject01;
 
 /**
  *
- * @author user
+ * @author 華美娟
  */
 public class A_Main {
 
@@ -17,9 +17,9 @@ public class A_Main {
     public static void main(String[] args) {
         //成績合計平均.跑流程();
         //計算BMI.跑流程();
-        攝氏轉華氏.跑流程();
+        //攝氏轉華氏.跑流程();
         //銀行帳戶.跑流程();
-        //猜密碼.跑流程();
+        猜密碼.跑流程();
         //判斷是否閏年.跑流程();
     }
 }
