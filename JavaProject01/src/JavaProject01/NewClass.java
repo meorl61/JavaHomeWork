@@ -7,7 +7,7 @@ package JavaProject01;
 
 /**
  *
- * @author 華美娟
+ * @author 華美娟 <Maple Hua>
  */
 public class NewClass {
     

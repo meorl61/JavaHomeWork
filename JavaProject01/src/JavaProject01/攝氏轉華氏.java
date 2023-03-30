@@ -28,7 +28,7 @@ public class 攝氏轉華氏 {
     public static void editandcalcdata() {
         System.out.println("--- 修改及計算 ---");
         System.out.println("");
-        degree = 100;
+        degree = 工具.輸入整數資料("請輸入要轉換的攝氏溫度:");
         wd = degree * 9 / 5 + 32;
     }
 

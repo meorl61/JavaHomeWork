@@ -36,7 +36,8 @@ public class 銀行帳戶 {
         次數 += 1;
         System.out.println("\n--- 操作次數_" + 次數 + " : 存款 ---");
         顯示帳戶資訊();
-        交易金額 = ((int) (Math.random() * 10) + 1) * 1000;
+        //交易金額 = ((int) (Math.random() * 10) + 1) * 1000;
+        交易金額 = 工具.輸入整數資料("請輸入要存入的交易金額：");
         餘額 += 交易金額;
         System.out.println("存款: " + 交易金額);
         System.out.println("存款完成!");
@@ -47,7 +48,8 @@ public class 銀行帳戶 {
         次數 += 1;
         System.out.println("\n--- 操作次數_" + 次數 + " : 提款 ---");
         顯示帳戶資訊();
-        交易金額 = (int) (Math.random() * (20001));
+        //交易金額 = (int) (Math.random() * (20001));
+        交易金額 = 工具.輸入整數資料("請輸入要提款的交易金額：");
         System.out.println("提款: " + 交易金額);
         if (交易金額 <= 餘額) {
             餘額 -= 交易金額;
