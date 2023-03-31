@@ -9,7 +9,7 @@ package JavaProject01;
  *
  * @author 華美娟 <Maple Hua>
  */
-public class 成績合計平均_使用範本練習 {
+public class 成績合計平均練習_使用範本 {
 
     //宣告物件變數
     private static S學生資料範本 學生1;
