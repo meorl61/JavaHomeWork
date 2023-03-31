@@ -12,9 +12,9 @@ package JavaProject01;
 public class 成績合計平均練習_使用範本 {
 
     //宣告物件變數
-    private static S學生資料範本 學生1;
-    private static S學生資料範本 學生2;
-    private static S學生資料範本 學生3;
+    private static S_學生資料範本 學生1;
+    private static S_學生資料範本 學生2;
+    private static S_學生資料範本 學生3;
     
     public static void 跑流程() {
         設定初始值();
@@ -23,9 +23,9 @@ public class 成績合計平均練習_使用範本 {
     
     public static void 設定初始值() {
         
-        學生1 = new S學生資料範本();
-        學生2 = new S學生資料範本();
-        學生3 = new S學生資料範本();
+        學生1 = new S_學生資料範本();
+        學生2 = new S_學生資料範本();
+        學生3 = new S_學生資料範本();
         
         學生1.設定初始("學生1");
         學生2.設定初始("學生2");

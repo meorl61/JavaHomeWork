@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author 華美娟 <Maple Hua>
  */
-public class S學生資料範本 {
+public class S_學生資料範本 {
     public String 學生姓名;
     public int 國文成績;
     public int 英文成績;
