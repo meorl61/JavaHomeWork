@@ -30,7 +30,7 @@ public class S學生資料範本 {
     }
     
     public void 顯示學生成績(){
-        System.out.println("~~ 列印學生成績 ~~");
+        System.out.println("\n~~ 列印學生成績 ~~");
         int arr[] = {this.國文成績,this.英文成績,this.數學成績,this.理化成績}; 
         this.合計總分 = 工具.加總(arr);
         this.平均成績 = 工具.平均(arr);
