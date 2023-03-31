@@ -29,7 +29,7 @@ public class S_學生資料範本 {
         this.理化成績 = 工具.輸入整數資料("請輸入【" + 學生編號 + "】的理化成績:");
     }
     
-    public void 顯示學生成績(){
+    public void 列印(){
         System.out.println("\n~~ 列印學生成績 ~~");
         int arr[] = {this.國文成績,this.英文成績,this.數學成績,this.理化成績}; 
         this.合計總分 = 工具.加總(arr);
