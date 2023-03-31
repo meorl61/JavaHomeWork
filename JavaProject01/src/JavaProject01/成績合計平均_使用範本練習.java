@@ -18,7 +18,7 @@ public class 成績合計平均_使用範本練習 {
     
     public static void 跑流程() {
         設定初始值();
-        顯示資料();
+        列印學生成績();
     }
     
     public static void 設定初始值() {
@@ -32,12 +32,10 @@ public class 成績合計平均_使用範本練習 {
         學生3.設定初始("學生3");
     }
 
-    public static void 顯示資料() {
+    public static void 列印學生成績() {
         學生1.顯示學生成績();
         學生2.顯示學生成績();
         學生3.顯示學生成績();
     }
-
-
 
 }
