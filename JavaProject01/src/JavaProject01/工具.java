@@ -44,6 +44,22 @@ public class 工具 {
         return avg;
     }
 
-    
+    public static boolean 銀行交易結果(String 交易方式, int 交易金額, int 客戶餘額) {
+        if (交易方式 == "存款") {
+            客戶餘額 += 交易金額;
+            return true;
+        }
+
+        if (交易方式 == "提款") {
+            if (客戶餘額 >= 交易金額) {
+                客戶餘額 -= 交易金額;
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        return false;
+    }
 
 }
