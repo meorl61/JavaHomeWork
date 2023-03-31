@@ -15,11 +15,12 @@ public class A_Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        成績合計平均.跑流程();
+        //成績合計平均.跑流程();
         //計算BMI.跑流程();
         //攝氏轉華氏.跑流程();
         //銀行帳戶.跑流程();
         //猜密碼.跑流程();
         //判斷是否閏年.跑流程();
+        銀行帳戶練習2.跑流程();
     }
 }

@@ -38,10 +38,12 @@ public class 工具 {
         return c;
     }
 
-    public static double 平均(int arr[]) {        
-        double avg;        
+    public static double 平均(int arr[]) {
+        double avg;
         avg = 加總(arr) / (arr.length * 1.0);
         return avg;
     }
+
+    
 
 }
