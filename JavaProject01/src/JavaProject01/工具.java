@@ -29,6 +29,15 @@ public class 工具 {
         return keyword;
     }
 
+    public static boolean 輸入01判斷資料1為真(String 訊息) {
+        System.out.println(訊息);
+        if (sc.nextInt() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static int 加總(int arr[]) {
         int c;
         c = 0;
