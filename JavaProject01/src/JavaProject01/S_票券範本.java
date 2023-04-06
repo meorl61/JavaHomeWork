@@ -24,7 +24,6 @@ public class S_票券範本 {
             System.out.println("輸入錯誤, 請輸入 0～5 的數字!!");
             選擇購票種類();
         }
-
     }
 
     public String 購票張數() {
