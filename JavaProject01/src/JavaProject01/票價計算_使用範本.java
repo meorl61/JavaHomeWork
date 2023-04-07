@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author 華美娟 <Maple Hua>
  */
-public class 票價計算練習 {
+public class 票價計算_使用範本 {
 
     private static S_票券範本 客人 = new S_票券範本();
     private static int 購買金額 = 0;
