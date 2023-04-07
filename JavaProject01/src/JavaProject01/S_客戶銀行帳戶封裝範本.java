@@ -9,7 +9,7 @@ package JavaProject01;
  *
  * @author 華美娟
  */
-public class S_客戶銀行帳戶範本 {
+public class S_客戶銀行帳戶封裝範本 {
 
     private String 帳戶名稱;
     private int 餘額;

@@ -11,9 +11,9 @@ import javax.print.DocFlavor;
  *
  * @author 華美娟
  */
-public class 銀行帳戶練習_使用建構子 {
+public class 銀行帳戶練習_使用封裝 {
 
-    static S_客戶銀行帳戶範本 客戶;
+    static S_客戶銀行帳戶封裝範本 客戶;
 
     public static void 跑流程() {
         開戶("阿土伯",100);
@@ -27,7 +27,7 @@ public class 銀行帳戶練習_使用建構子 {
 
         //客戶 = new S_帳戶範本加建構子(工具.輸入文字資料("請輸入開戶者姓名:"),工具.輸入整數資料("請輸入開戶金額: "));
         //改使用封裝
-        客戶 = new S_客戶銀行帳戶範本();
+        客戶 = new S_客戶銀行帳戶封裝範本();
         客戶.開戶(客戶名,初始金額);
     }
 
