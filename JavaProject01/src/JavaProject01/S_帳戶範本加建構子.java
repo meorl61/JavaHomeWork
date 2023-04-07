@@ -13,11 +13,14 @@ public class S_帳戶範本加建構子 {
     String 帳戶名稱;
     int 餘額;
 
+    /*
+    封裝, 不要直接指定, 要用set 方式
+    
     public S_帳戶範本加建構子(String 帳戶名稱, int 餘額) {
         this.帳戶名稱 = 帳戶名稱;
         this.餘額 = 餘額;
     }
-
+   */
     @Override
     public String toString() {
         return  "戶名: " + 帳戶名稱 + " 帳戶餘額: " + 餘額 + '\n';
