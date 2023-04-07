@@ -15,20 +15,21 @@ package JavaProject01;
  * @author 華美娟
  */
 public class 銀行帳戶_建構子練習 {
-    static S_帳戶範本加建構子 客戶;
+    static S_帳戶範本加建構子 客戶1;
+    static S_帳戶範本加建構子 客戶2;
 
     
     public static void 執行() {        
         //客戶 = new S_帳戶範本加建構子("阿土伯",5000);
-        客戶 = new S_帳戶範本加建構子();
-        客戶.set帳戶名稱("阿土伯");
-        客戶.set餘額(5000);
-        System.out.println(客戶);
+        客戶1 = new S_帳戶範本加建構子();
+        客戶1.set帳戶名稱("阿土伯");
+        客戶1.set餘額(5000);
+        System.out.println(客戶1);
         
         //客戶 = new S_帳戶範本加建構子("錢多多",10000);
-        客戶.set帳戶名稱("錢多多");
-        客戶.set餘額(10000);        
-        System.out.println(客戶);
+        客戶2.set帳戶名稱("錢多多");
+        客戶2.set餘額(10000);        
+        System.out.println(客戶2);
         
     }
 }
