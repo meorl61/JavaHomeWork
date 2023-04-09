@@ -59,14 +59,14 @@ public class 班級_ArrayList練習 {
         學校.顯示各班級名稱();
         int 班級編號;
         班級編號 = 工具.輸入整數資料("你要建立哪一班的學生");
-        輸入班級學生名稱(班級編號);
+        新增學生(班級編號);
     }
 
     public static void 顯示所有班級() {
         學校.顯示各班級名稱();
     }
 
-    public static void 輸入班級學生名稱(int 班級編號) {
+    public static void 新增學生(int 班級編號) {
         單一學生 = new S_學生資料範本();
         String 學生名稱;
         學生名稱= 工具.輸入文字資料("請輸入學生姓名, 輸入Q結束");

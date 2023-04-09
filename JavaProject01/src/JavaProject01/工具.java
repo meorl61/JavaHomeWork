@@ -35,7 +35,17 @@ public class 工具 {
              return -1;
         }        
     }
-
+    
+    public static boolean 判斷是否為真(String keyword,String 真字串) {
+        boolean result;
+        result = false;
+         
+        if (真字串.contains(keyword)) {
+            result = true;
+        }
+         return result;
+    }
+    
     public static boolean 輸入01判斷資料1為真(String 訊息) {
         System.out.println(訊息);
         if (sc.next().equals("1")) {
