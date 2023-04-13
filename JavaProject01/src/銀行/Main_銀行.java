@@ -5,14 +5,13 @@
  */
 package 銀行;
 
-import JavaProject01.工具;
 import java.util.ArrayList;
 
 /**
  *
  * @author 華美娟
  */
-public class S1_銀行 {
+public class Main_銀行 {
 
     static String 銀行名稱;
     static ArrayList<S1_客戶範本> 客戶們 = new ArrayList<S1_客戶範本>();

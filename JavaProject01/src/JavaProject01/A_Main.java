@@ -5,7 +5,7 @@
  */
 package JavaProject01;
 
-import 銀行.S1_銀行;
+import 銀行.Main_銀行;
 
 /**
  *
@@ -32,6 +32,6 @@ public class A_Main {
         //銀行帳戶練習_使用封裝.跑流程();        
         //班級_ArrayList練習.跑流程();
         
-        S1_銀行.main(args);  //2023-04-13
+        Main_銀行.main(args);  //2023-04-13
     }
 }
