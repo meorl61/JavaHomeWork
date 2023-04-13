@@ -5,6 +5,8 @@
  */
 package JavaProject01;
 
+import 銀行.S1_帳本範本;
+
 /**
  *
  * @author 華美娟
