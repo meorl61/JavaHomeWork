@@ -15,12 +15,13 @@ public class S1_銀行 {
 
     static String 銀行名稱;
     static ArrayList<S1_客戶範本> 客戶們 = new ArrayList<S1_客戶範本>();
-
-    public static void 跑流程() {
+    
+    
+    public static void main(String[] args) {
         銀行名稱= "金讚銀行";
         選擇銀行交易();
     }
-
+    
     private static void 選擇銀行交易() {
         int 銀行交易方式;
                        System.out.println("===================== " + 銀行名稱 + " =====================");
@@ -49,7 +50,6 @@ public class S1_銀行 {
         新客戶.客戶名稱 = 工具.輸入文字資料("請輸入客戶名稱");
         客戶們.add(新客戶);
          System.out.println("新增客戶:" + 新客戶.客戶名稱 + " 成功!\n");
-
     }
 
     private static void 顯示所有客戶() {
