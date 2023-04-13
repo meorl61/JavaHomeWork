@@ -18,10 +18,26 @@ public class S1_銀行 {
 
     public static void main(String[] args) {
         銀行名稱 = "金讚銀行";
-        選擇銀行交易();
+        選擇銀行交易("abc");
     }
 
-    private static void 選擇銀行交易() {
+    private static void 選擇銀行交易(String s3) {
+        String s1 = "123";
+        String s2 = "123";   
+        
+        int s4=123;
+        
+        s3=Integer.toString(s4);  //變新的一份資料
+        
+        //判是不是同一份
+        System.out.println("s1==s2 is " + (s1 == s2));
+        System.out.println("s1==s3 is " + (s1 == s3));
+        
+        System.out.println("s1==s3 is " + s1.equals(s3));
+        s3="123";
+        System.out.println("s1==s3 is " + (s1 == s3));
+        
+        
         int 銀行交易方式;
         System.out.println("===================== " + 銀行名稱 + " =====================");
         銀行交易方式 = 工具.輸入整數資料(" 0.離開  1.新增客戶  2.進入客戶交易  3.顯示所有客戶");
@@ -42,7 +58,7 @@ public class S1_銀行 {
         if (銀行交易方式 == 0) {
             System.out.println("謝謝使用, 再見");
         } else {
-            選擇銀行交易();
+            選擇銀行交易("");
         }
     }
 
@@ -52,7 +68,7 @@ public class S1_銀行 {
         if (查詢名稱是否重覆(輸入客戶名稱)) {
             建新客戶();
         } else {
-            設定客戶帳密(輸入客戶名稱);            
+            設定客戶帳密(輸入客戶名稱);
         }
     }
 
