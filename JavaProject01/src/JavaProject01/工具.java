@@ -21,7 +21,14 @@ public class 工具 {
         keyword = sc.next();
         return keyword;
     }
-
+    public static String 輸入文字資料1(String 訊息,String Errmsg) {
+        String keyword;
+        System.out.println(訊息);
+        keyword = sc.next();
+        Errmsg="123";
+        return keyword;
+    }
+    
     public static int 輸入整數資料(String 訊息) {
         String keywordstr;
         int keyword;
