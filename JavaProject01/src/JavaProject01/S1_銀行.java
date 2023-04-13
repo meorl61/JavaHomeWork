@@ -15,15 +15,15 @@ public class S1_銀行 {
 
     static String 銀行名稱;
     static ArrayList<S1_客戶範本> 客戶們 = new ArrayList<S1_客戶範本>();
-    
+
     public static void main(String[] args) {
-        銀行名稱= "金讚銀行";
+        銀行名稱 = "金讚銀行";
         選擇銀行交易();
     }
-    
+
     private static void 選擇銀行交易() {
         int 銀行交易方式;
-                       System.out.println("===================== " + 銀行名稱 + " =====================");
+        System.out.println("===================== " + 銀行名稱 + " =====================");
         銀行交易方式 = 工具.輸入整數資料(" 0.離開  1.新增客戶  2.進入客戶交易  3.顯示所有客戶");
         switch (銀行交易方式) {
             case 1:
@@ -48,7 +48,7 @@ public class S1_銀行 {
         System.out.println("\n ------ 新開戶 ------");
         新客戶.客戶名稱 = 工具.輸入文字資料("請輸入客戶名稱");
         客戶們.add(新客戶);
-         System.out.println("新增客戶:" + 新客戶.客戶名稱 + " 成功!\n");
+        System.out.println("新增客戶:" + 新客戶.客戶名稱 + " 成功!\n");
     }
 
     private static void 顯示所有客戶() {
@@ -64,12 +64,9 @@ public class S1_銀行 {
             System.out.println("");
             顯示所有客戶();
             int 客戶編號 = 工具.輸入整數資料("請選擇客戶編號");
-            if (客戶編號>=0 && 客戶編號<客戶們.size())
-            {
-            客戶們.get(客戶編號).客戶交易選單();           
-            }
-            else
-            {
+            if (客戶編號 >= 0 && 客戶編號 < 客戶們.size()) {
+                客戶們.get(客戶編號).客戶交易選單();
+            } else {
                 System.out.println("客戶編號輸入錯誤!!");
                 進入客戶選單();
             }

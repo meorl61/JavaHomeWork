@@ -17,7 +17,7 @@ public class S1_客戶範本 {
     ArrayList<S1_帳本範本> 客戶所有帳本 = new ArrayList<S1_帳本範本>();
 
     public void 客戶交易選單() {
-        System.out.println("\n============================");
+        System.out.println("============================");
         System.out.println(this.客戶名稱 + " 交易選單:");
         int 客戶選取功能 = 工具.輸入整數資料("0.回上層  1.開新帳本   2.存款   3.提款  4.顯示所有帳本明細");
         switch (客戶選取功能) {
@@ -58,24 +58,26 @@ public class S1_客戶範本 {
         } else {
             System.out.println("");
             顯示所有帳本明細();
+            
             int 目前帳戶編號 = 工具.輸入整數資料("\n請選擇你要 " + 交易方式 + " 的帳號");
-            if(目前帳戶編號>=0 && 目前帳戶編號 <this.客戶所有帳本.size() ){
-            this.客戶所有帳本.get(目前帳戶編號).顯示帳本資料();   //交易前金額
+            
+            if (目前帳戶編號 >= 0 && 目前帳戶編號 < this.客戶所有帳本.size()) {
+                this.客戶所有帳本.get(目前帳戶編號).顯示帳本資料();   //交易前金額
 
-            int 交易金額 = 工具.輸入整數資料("請輸入要" + 交易方式 + "的金額");
-            System.out.println("---" + 交易方式 + ": " + 交易金額 + "---");
+                int 交易金額 = 工具.輸入整數資料("請輸入要" + 交易方式 + "的金額");
+                System.out.println("---" + 交易方式 + ": " + 交易金額 + "---");
 
-            String 異動結果 = this.客戶所有帳本.get(目前帳戶編號).帳本金額異動(交易方式, 交易金額);
-            System.out.println(異動結果);}
-            else {
-            System.out.println("帳戶編號輸入錯誤!!");    
-            存提款交易(交易方式);
+                String 異動結果 = this.客戶所有帳本.get(目前帳戶編號).帳本金額異動(交易方式, 交易金額);
+                System.out.println(異動結果);
+            } else {
+                System.out.println("帳戶編號輸入錯誤!!");
+                存提款交易(交易方式);
             }
         }
     }
 
     public void 顯示所有帳本明細() {
-        System.out.println("戶名:"+this.客戶名稱);
+        System.out.println("戶名:" + this.客戶名稱);
         for (S1_帳本範本 帳戶 : this.客戶所有帳本) {
             帳戶.顯示帳本資料();
         }

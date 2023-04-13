@@ -13,7 +13,6 @@ public class S1_帳本範本 {
 
     int 帳戶號碼;
     int 帳戶金額;
-    public String 交易訊息;
 
     public String 帳本金額異動(String 異動方式, int 異動金額) {
         String result = "";
@@ -34,7 +33,7 @@ public class S1_帳本範本 {
                     }
                     break;
             }
-            System.out.println(異動方式+" 後餘額: "+ this.帳戶金額);
+            System.out.println(異動方式 + " 後餘額: " + this.帳戶金額);
         }
         return result;
     }
