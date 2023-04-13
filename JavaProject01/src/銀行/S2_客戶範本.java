@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author 華美娟
  */
-public class S1_客戶範本 {
+public class S2_客戶範本 {
 
     private String 客戶名稱;
     private String 帳號;
