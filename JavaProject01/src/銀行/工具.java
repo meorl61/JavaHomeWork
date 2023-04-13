@@ -22,44 +22,18 @@ public class 工具 {
         keyword = sc.next();
         return keyword;
     }
-    public static String 輸入文字資料1(String 訊息,String Errmsg) {
-        String keyword;
-        System.out.println(訊息);
-        keyword = sc.next();
-        Errmsg="123";
-        return keyword;
-    }
-    
+
     public static int 輸入整數資料(String 訊息) {
         String keywordstr;
         int keyword;
         System.out.println(訊息);
         //keyword = sc.nextInt();   // 避免輸入字串錯誤, 
         keywordstr = sc.next();     // 先用字串接
-        if(判斷是否為數字(keywordstr)){
-            keyword=Integer.parseInt(keywordstr);
-             return keyword;
+        if (判斷是否為數字(keywordstr)) {
+            keyword = Integer.parseInt(keywordstr);
+            return keyword;
         } else {
-             return -1;
-        }        
-    }
-    
-    public static boolean 判斷是否為真(String keyword,String 真字串) {
-        boolean result;
-        result = false;
-         
-        if (真字串.contains(keyword)) {
-            result = true;
-        }
-         return result;
-    }
-    
-    public static boolean 輸入01判斷資料1為真(String 訊息) {
-        System.out.println(訊息);
-        if (sc.next().equals("1")) {
-            return true;
-        } else {
-            return false;
+            return -1;
         }
     }
 
@@ -70,39 +44,6 @@ public class 工具 {
             }
         }
         return true;
-    }
-
-    public static int 加總(int arr[]) {
-        int c;
-        c = 0;
-        for (int i = 0; i < arr.length; i++) {
-            c += arr[i];
-        }
-        return c;
-    }
-
-    public static double 平均(int arr[]) {
-        double avg;
-        avg = 加總(arr) / (arr.length * 1.0);
-        return avg;
-    }
-
-    public static boolean 銀行交易結果(String 交易方式, int 交易金額, int 客戶餘額) {
-        if (交易方式 == "存款") {
-            客戶餘額 += 交易金額;
-            return true;
-        }
-
-        if (交易方式 == "提款") {
-            if (客戶餘額 >= 交易金額) {
-                客戶餘額 -= 交易金額;
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        return false;
     }
 
 }
