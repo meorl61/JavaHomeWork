@@ -16,7 +16,6 @@ public class S1_銀行 {
     static String 銀行名稱;
     static ArrayList<S1_客戶範本> 客戶們 = new ArrayList<S1_客戶範本>();
     
-    
     public static void main(String[] args) {
         銀行名稱= "金讚銀行";
         選擇銀行交易();
@@ -65,7 +64,15 @@ public class S1_銀行 {
             System.out.println("");
             顯示所有客戶();
             int 客戶編號 = 工具.輸入整數資料("請選擇客戶編號");
-            客戶們.get(客戶編號).客戶選單();           
+            if (客戶編號>=0 && 客戶編號<客戶們.size())
+            {
+            客戶們.get(客戶編號).客戶交易選單();           
+            }
+            else
+            {
+                System.out.println("客戶編號輸入錯誤!!");
+                進入客戶選單();
+            }
         }
     }
 
