@@ -5,7 +5,6 @@
  */
 package 銀行;
 
-import JavaProject01.*;
 import java.util.Scanner;
 
 /**
