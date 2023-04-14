@@ -17,6 +17,10 @@ public class A_Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        //System.out.printf("abcdefghijklmnop");
+        //System.out.println("\rAAA");
+        
         //成績合計平均.跑流程();
         //計算BMI.跑流程();
         //攝氏轉華氏.跑流程();
@@ -32,6 +36,6 @@ public class A_Main {
         //銀行帳戶練習_使用封裝.跑流程();        
         //班級_ArrayList練習.跑流程();
         
-        Main_銀行.main(args);  //2023-04-13
+        //Main_銀行.main(args);  //2023-04-13
     }
 }

@@ -89,6 +89,7 @@ public class S3_銀行範本 {
 
     private boolean 查詢帳號是否重覆(String 要確認的登入帳號) {
         boolean 查詢結果 = false;
+        
         for (S2_客戶範本 客戶 : this.客戶們) {
             if (要確認的登入帳號.equals(客戶.get帳號())) {
                 查詢結果 = true;
@@ -121,6 +122,7 @@ public class S3_銀行範本 {
 
     private int 查詢客戶編號(String 登入帳號, String 登入密碼) {
         int 查詢結果 = -1;
+        
         for (int i = 0; i < this.客戶們.size(); i++) {
             if (登入帳號.equals(this.客戶們.get(i).get帳號()) && 登入密碼.equals(this.客戶們.get(i).get密碼())) {
                 查詢結果 = i;
