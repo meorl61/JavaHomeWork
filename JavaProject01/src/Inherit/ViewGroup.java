@@ -22,8 +22,7 @@ public class ViewGroup extends View {
         }
     }
 
-    View findViewById(int vid) {
-        
+    View findViewById(int vid) {        
         for (View v : views) {
             if (v.id == vid) {
                 return v;
