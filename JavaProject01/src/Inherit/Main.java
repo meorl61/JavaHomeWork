@@ -23,6 +23,7 @@ public class Main {
         vg.addView(btn);
         vg.show();
 
+        //尋找按鈕
         Button b = (Button) vg.findViewById(3);
         b.click();
     }
