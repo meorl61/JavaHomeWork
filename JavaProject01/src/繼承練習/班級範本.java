@@ -28,7 +28,7 @@ public class 班級範本 extends ArrayList_父容器 {
         System.out.println(班級名稱 + ", 新增完成\n");
     }
 
-    @Override
+    @Override   //重寫 ArrayList_父容器的 show()
     public void show() {
         System.out.println("\n" + this.班級名稱);
         this.學生們.get項目s().stream().map(a學生 -> (學生範本) a學生).forEachOrdered(

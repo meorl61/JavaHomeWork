@@ -5,6 +5,8 @@
  */
 package 繼承練習;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author 華美娟
@@ -30,15 +32,27 @@ public class 學校範本 extends ArrayList_父容器 {
         this.學校名稱 = 學校名稱;
     }
 
-    @Override
+    @Override   //重寫 ArrayList_父容器的 show()
     public void show() {
         System.out.println("\n*****************************");
         System.out.println("～～ " + this.學校名稱 + " 各班學期成績 ～～");
 
-        this.學校班級s.get項目s().stream().map(a班級 -> (班級範本) a班級).forEachOrdered(
-                班級 -> {
-                    班級.show();
+        //多執行序寫法
+        this.學校班級s.get項目s().stream().map(班級 -> (班級範本) 班級).forEachOrdered(
+                轉換班級 -> {
+                    轉換班級.show();
                 }
         );
+    }
+
+    public void show2() {  //原始寫法
+        System.out.println("\n*****************************");
+        System.out.println("～～ " + this.學校名稱 + " 各班學期成績 ～～");
+
+        ArrayList<Object> 學校班級s = this.學校班級s.get項目s();  //取得Object資料
+        for (Object 班級 : 學校班級s) {
+            班級範本 轉換班級 = (班級範本) 班級;
+            轉換班級.show();
+        }
     }
 }
