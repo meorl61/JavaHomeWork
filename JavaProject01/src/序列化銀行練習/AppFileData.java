@@ -16,13 +16,13 @@ import java.io.ObjectOutputStream;
  *
  * @author 華美娟
  */
-public class AppData {
+public class AppFileData {
 
-    private Model_銀行 A銀行;
+    private 銀行範本 A銀行;
     private final String filename; //final 建構子初值後禁止修改    
 
-    public AppData() {
-        filename = "銀行.data"; //沒指定路徑,預設為專案資料夾
+    public AppFileData() {
+        filename = "src/序列化銀行練習/Data_銀行資料.data"; //沒指定路徑,預設為專案資料夾        
     }
 
     public void 存檔() throws Exception {
@@ -36,16 +36,16 @@ public class AppData {
     public void 讀檔() throws Exception {
         FileInputStream fis = new FileInputStream(filename);
         ObjectInputStream ois = new ObjectInputStream(fis);
-        this.A銀行 = (Model_銀行) ois.readObject();
+        this.A銀行 = (銀行範本) ois.readObject();
         ois.close();
         fis.close();
     }
 
-    public void set銀行(Model_銀行 c) {
+    public void set銀行(銀行範本 c) {
         this.A銀行 = c;
     }
 
-    public Model_銀行 get銀行() {
+    public 銀行範本 get銀行() {
         return this.A銀行;
     }
 

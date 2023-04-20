@@ -7,8 +7,6 @@ package 序列化銀行練習;
 
 import java.io.Serializable;
 
-
-
 /**
  *
  * @author 華美娟
@@ -40,18 +38,18 @@ public class 帳本範本 implements Serializable {
                     this.餘額 -= 交易金額;
                     System.out.println("提款成功!!!");
                 }
-                break;           
+                break;
         }
-        System.out.println("銀行帳戶餘額:: " + this.餘額);
-        
+        System.out.println(this.帳號 + " 帳本餘額: " + this.餘額);
+
     }
 
     public CharSequence get帳號() {
         return 帳號;
     }
 
-    public void show(){
-        System.out.println("帳號: "+this.帳號+"  餘額: "+this.餘額 );
+    public void show() {
+        System.out.println("帳本號: " + this.帳號 + "  餘額: " + this.餘額);
     }
-    
+
 }

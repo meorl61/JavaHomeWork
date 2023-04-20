@@ -7,17 +7,15 @@ package 序列化銀行練習;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  *
  * @author 華美娟
  */
-public class 銀行範本 implements Serializable{
+public class 銀行範本 implements Serializable {
 
     String 銀行名稱;
     ArrayList<客戶範本> 客戶們;
-    Scanner 輸入文字 = new Scanner(System.in, "Big5");
 
     public void set銀行名稱(String 銀行名稱) {
         this.銀行名稱 = 銀行名稱;
@@ -31,7 +29,7 @@ public class 銀行範本 implements Serializable{
     public void 選擇銀行交易() {
         int 銀行交易方式;
         System.out.println("===================== " + 銀行名稱 + " =====================");
-        銀行交易方式 = 輸入整數資料(" 0.離開" + this.銀行名稱 + "  1.新增客戶  2.進入客戶交易  3.顯示所有客戶");
+        銀行交易方式 = 工具.輸入整數資料(" 0.離開" + this.銀行名稱 + "  1.新增客戶  2.進入客戶交易  3.顯示所有客戶");
         switch (銀行交易方式) {
             case 1:
                 System.out.println("\n ------ 新增客戶 ------");
@@ -46,26 +44,26 @@ public class 銀行範本 implements Serializable{
                 顯示所有客戶();
                 break;
         }
-        
+
         if (銀行交易方式 == 0) {
             System.out.println(this.銀行名稱 + " 謝謝您的光臨!\n");
         } else {
             選擇銀行交易();
         }
-         
+
     }
 
     private void 建新客戶() {
         String 輸入客戶名稱;
-        輸入客戶名稱 = 輸入文字資料("請輸入客戶名稱");
+        輸入客戶名稱 = 工具.輸入文字資料("請輸入客戶名稱");
 
         if (查詢名稱是否重覆(輸入客戶名稱)) {
 
             建新客戶();
         } else {
             客戶範本 新客戶 = new 客戶範本(輸入客戶名稱);
-             this.客戶們.add(新客戶);
-             System.out.println("新增客戶:" + 新客戶.get客戶名稱() + " 成功!\n");        
+            this.客戶們.add(新客戶);
+            System.out.println("新增客戶:" + 新客戶.get客戶名稱() + " 成功!\n");
         }
 
     }
@@ -92,7 +90,7 @@ public class 銀行範本 implements Serializable{
 
     private void 進入客戶選單() {
         顯示所有客戶();
-        int 客戶編號 = 輸入整數資料("請選擇客戶");
+        int 客戶編號 = 工具.輸入整數資料("請選擇客戶");
         if (客戶編號 < 0) {
             System.out.println("輸入錯誤!\n");
             進入客戶選單();
@@ -107,33 +105,8 @@ public class 銀行範本 implements Serializable{
         }
     }
 
-    public String 輸入文字資料(String 訊息) {
-        String keyword;
-        System.out.println(訊息);
-        keyword = 輸入文字.next();
-        return keyword;
+    public void set客戶們(ArrayList<客戶範本> 客戶們) {
+        this.客戶們 = 客戶們;
     }
 
-    public int 輸入整數資料(String 訊息) {
-        String keywordstr;
-        int keyword;
-        System.out.println(訊息);
-        //keyword = sc.nextInt();   // 避免輸入字串錯誤, 
-        keywordstr = 輸入文字.next();     // 先用字串接
-        if (判斷是否為數字(keywordstr)) {
-            keyword = Integer.parseInt(keywordstr);
-            return keyword;
-        } else {
-            return -1;
-        }
-    }
-
-    public boolean 判斷是否為數字(String 字串) {
-        for (int i = 字串.length(); --i >= 0;) {
-            if (!Character.isDigit(字串.charAt(i))) {
-                return false;
-            }
-        }
-        return true;
-    }
 }
