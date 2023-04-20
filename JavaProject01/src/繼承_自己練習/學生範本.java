@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package 繼承練習;
+package 繼承_自己練習;
 
 /**
  *
