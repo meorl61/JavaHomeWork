@@ -3,12 +3,29 @@ package 存檔練習_觀音32籤;
 import java.util.ArrayList;
 
 public class Main {
-
+    static ArrayList<觀音靈課_Model> 觀音靈課32籤1 = new ArrayList<觀音靈課_Model>();
+    static 觀音靈課Data 籤詩檔案 = new 觀音靈課Data();
     public static void main(String[] args) {
 
-        ArrayList<觀音靈課_Model> 觀音靈課32籤1 = new ArrayList<觀音靈課_Model>();
-        觀音靈課Data 籤詩檔案 = new 觀音靈課Data();
+        讀資料();
 
+        String 占卦 = "";
+        for (int i = 1; i < 6; i++) {
+            占卦 += 自動搖卦(i);
+        }
+
+        for (觀音靈課_Model 讀檔a : 觀音靈課32籤1) {
+            if (讀檔a.卦爻.equals(占卦)) {
+                System.out.println("\n" + 讀檔a.卦爻);
+                System.out.println("\n你抽到第 " + 讀檔a.籤號 + " 卦: " + 讀檔a.卦名);
+                System.out.println(讀檔a.吉凶 + " 籤");
+                System.out.println("\n籤詩: " + 讀檔a.卦詞);
+                System.out.println("解譯: " + 讀檔a.卦義);
+            }
+        }
+    }
+
+    public static void 讀資料(){
         //存檔
         籤詩檔案.建檔();
 
@@ -31,27 +48,10 @@ public class Main {
             System.out.println("讀檔失敗");
             System.out.println(e.toString());
         }
-
-        String 占卦 = "";
-        for (int i = 1; i < 6; i++) {
-            占卦 += 搖卦(i);
-        }
-
         籤詩檔案 = 讀檔.get資料();
         觀音靈課32籤1 = 籤詩檔案.get觀音靈課資料();
-
-        for (觀音靈課_Model 讀檔a : 觀音靈課32籤1) {
-            if (讀檔a.卦爻.equals(占卦)) {
-                System.out.println(讀檔a.卦爻);
-                System.out.println("你抽到第 " + 讀檔a.籤號 + " 卦: " + 讀檔a.卦名);
-                System.out.println(讀檔a.吉凶 + " 籤");
-                System.out.println("籤詩: " + 讀檔a.卦詞);
-                System.out.println("解譯: " + 讀檔a.卦義);
-            }
-        }
     }
-
-    public static String 搖卦(int 第幾次) {
+    public static String 自動搖卦(int 第幾次) {
         int 擲骰 = (int) (Math.random() * 2);
         String resultstr = "○";
         if (擲骰 != 0) {
@@ -72,8 +72,8 @@ public class Main {
                     resultstr = "土";
                     break;
             }
-
         }
         return resultstr;
     }
+
 }
