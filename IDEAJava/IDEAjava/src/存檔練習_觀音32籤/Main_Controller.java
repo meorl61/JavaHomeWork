@@ -8,38 +8,34 @@ public class Main_Controller {
 
     public static void main(String[] args) {
 
-        觀音靈課32籤1=讀資料();
+        觀音靈課32籤1 = 讀資料();
 
         String 占卦 = 自動搖卦(1);
 
         for (觀音靈課_Model 讀檔a : 觀音靈課32籤1) {
             if (讀檔a.卦爻.equals(占卦)) {
-                觀音靈課_View.顯示資料(讀檔a.籤號,讀檔a.卦爻,讀檔a.卦名,讀檔a.吉凶,讀檔a.卦詞,讀檔a.卦義);
-
+                觀音靈課_View.顯示資料(讀檔a.籤號, 讀檔a.卦爻, 讀檔a.卦名, 讀檔a.吉凶, 讀檔a.卦詞, 讀檔a.卦義);
             }
         }
     }
 
 
-
     public static String 自動搖卦(int 第幾次) {
-
         int 擲骰 = (int) (Math.random() * 2);
         char resultstr = '○';
 
         if (擲骰 != 0) {
             String word5 = "金木水火土";
-            resultstr = word5.charAt(第幾次-1);
+            resultstr = word5.charAt(第幾次 - 1);
         }
 
-        if(第幾次<5)
-        {
-            return resultstr+自動搖卦(第幾次+1);
+        if (第幾次 < 5) {
+            return resultstr + 自動搖卦(第幾次 + 1);
         }
-        return ""+resultstr;
+        return "" + resultstr;
     }
 
-    public static ArrayList<觀音靈課_Model> 讀資料(){
+    public static ArrayList<觀音靈課_Model> 讀資料() {
         //存檔
         觀音靈課_Model_Data 籤詩檔案 = new 觀音靈課_Model_Data();
 
