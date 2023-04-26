@@ -42,4 +42,12 @@ public class ExtraData {
     public Object getObjectExtra(String name) {
         return map.get(name);
     }
+    
+    public void putExtra(String name, 帳戶範本 value) {
+        map.put(name, value);
+    }
+
+    public Object get帳戶範本Extra(String name) {
+        return map.get(name);
+    }
 }
