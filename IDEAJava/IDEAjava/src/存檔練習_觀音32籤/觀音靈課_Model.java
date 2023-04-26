@@ -1,4 +1,4 @@
-package 存檔練習;
+package 存檔練習_觀音32籤;
 
 import java.io.Serializable;
 

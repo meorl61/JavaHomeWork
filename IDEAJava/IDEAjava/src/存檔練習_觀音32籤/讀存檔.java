@@ -1,14 +1,13 @@
-package 存檔練習;
+package 存檔練習_觀音32籤;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 
 public class 讀存檔 {
     private 觀音靈課Data 資料;
-    private final String filename="src/存檔練習/觀音靈課32籤1";
+    private final String filename="src/存檔練習_觀音32籤/觀音靈課32籤";
 
     public void set資料(觀音靈課Data 資料) {
         this.資料 = 資料;
