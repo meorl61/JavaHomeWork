@@ -7,7 +7,7 @@ import java.io.ObjectOutputStream;
 
 public class 讀存檔 {
     private 觀音靈課_Model_Data 資料;
-    private final String filename="src/存檔練習_觀音32籤/觀音靈課32籤";
+    private final String filename="src/存檔練習_觀音32籤/資料檔_觀音靈課32籤";
 
     public void set資料(觀音靈課_Model_Data 資料) {
         this.資料 = 資料;
