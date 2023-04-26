@@ -3,7 +3,7 @@ package 存檔練習_觀音32籤;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class 觀音靈課Data  implements Serializable {
+public class 觀音靈課_Model_Data implements Serializable {
      ArrayList<觀音靈課_Model> 觀音靈課資料 = new ArrayList<觀音靈課_Model>();
 
     public ArrayList<觀音靈課_Model> get觀音靈課資料() {

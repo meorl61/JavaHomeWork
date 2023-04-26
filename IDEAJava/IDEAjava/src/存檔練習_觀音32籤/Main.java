@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     static ArrayList<觀音靈課_Model> 觀音靈課32籤1 = new ArrayList<觀音靈課_Model>();
-    static 觀音靈課Data 籤詩檔案 = new 觀音靈課Data();
+    static 觀音靈課_Model_Data 籤詩檔案 = new 觀音靈課_Model_Data();
     public static void main(String[] args) {
 
         讀資料();
@@ -51,6 +51,7 @@ public class Main {
         籤詩檔案 = 讀檔.get資料();
         觀音靈課32籤1 = 籤詩檔案.get觀音靈課資料();
     }
+
     public static String 自動搖卦(int 第幾次) {
         int 擲骰 = (int) (Math.random() * 2);
         String resultstr = "○";
