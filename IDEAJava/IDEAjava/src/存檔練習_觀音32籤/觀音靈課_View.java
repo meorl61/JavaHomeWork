@@ -11,5 +11,10 @@ public class 觀音靈課_View {
         System.out.println("\n籤詩: " + 卦詞);
         System.out.println("解譯: " + 卦義);
 
+        畫面介面.卦爻文字塊.setText(卦爻);
+        畫面介面.籤號文字塊.setText("你抽到 第 " + Integer.toString(籤號) + " 卦 " + 吉凶 + " 卦");
+        畫面介面.卦名文字塊.setText(卦名);
+        畫面介面.卦詞文字塊.setText("卦詞: \n" + 卦詞);
+        畫面介面.卦義文字塊.setText("卦義: \n" + 卦義);
     }
 }

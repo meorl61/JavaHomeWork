@@ -2,16 +2,18 @@ package 存檔練習_觀音32籤;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class 觀音靈課_Model_Data implements Serializable {
-     ArrayList<觀音靈課_Model> 觀音靈課資料 = new ArrayList<觀音靈課_Model>();
+     //ArrayList<觀音靈課_Model> 觀音靈課資料 = new ArrayList<觀音靈課_Model>();
+    HashMap<String,Object> 籤筒 = new HashMap();
 
-    public ArrayList<觀音靈課_Model> get觀音靈課資料() {
-        return 觀音靈課資料;
+    public HashMap<String, Object> get籤筒() {
+        return 籤筒;
     }
 
     public void 建檔() {
-        觀音靈課_Model 單一卦資料 = new 觀音靈課_Model();
+        //觀音靈課_Model 單一卦資料 = new 觀音靈課_Model();
         String[][] newdatas = {
                 { "1","昇進卦","上上","金木水火土","彩鳳臨丹闕。靈龜降吉祥。禍除福祿至。喜氣自洋洋。","此卦求財大吉。正宜出入歡娛。官詞口舌並消除。病人起離床席。求官目下成就。行人早晚還歸。禍除災散福盈餘。最喜高明富貴。"},
                 { "2","從革卦","上上","金○○○○","舊跡宜更改。新事好進程。龍門魚化躍。凡骨作神靈。","此卦求財大利。謀望定有歸期。病人痊瘥離床席。凡事經營有理。行人還家立事。在外必有食衣。春來花發更何疑。幹事百無阻滯。"},
@@ -45,11 +47,15 @@ public class 觀音靈課_Model_Data implements Serializable {
                 {"30","後喜卦","中平","金○水火土","離水得到岸。過橋獲度安。重重憂險阻。蕩蕩自心寬。","此卦心懷憂慮。所求未得自然。求官進相望高遷。不見隨心滿願。自覺重重有阻。誰知漸漸當權。佇看錦色耀重添。官祿增崇榮顯。"},
                 {"31","遲滯卦","下下","金木水○土","迢迢途路遠。看看日墜山。憂心無可托。所作事艱難。","此卦凡事遲滯。猶如車陷淤泥。程遙路遠日沈西。無托無依無濟。投托少逢相識。求財不見毫釐。不如聞早念阿彌。自有神天孚庇。"},
                 {"32","絕跡卦","下下","○○○○○","塵暗秦時鏡。珉含卞氏瓊。如屈石窯內。何日見光明。","此卦憂疑之兆。所為暗昧不明。只宜守舊不宜行。口舌是非災病。一切所求不遂。百般謀望難成。不如向善早看經。免致磨磚作鏡。"}};
+
         for (int i = 0; i < newdatas.length; i++) {
-             單一卦資料 = new 觀音靈課_Model();
+            觀音靈課_Model 單一卦資料 = new 觀音靈課_Model();
             單一卦資料.set資料(  Integer.valueOf(newdatas[i][0]),newdatas[i][1], newdatas[i][2], newdatas[i][3], newdatas[i][4], newdatas[i][5] );
-            觀音靈課資料.add(單一卦資料);
+
+            //觀音靈課資料.add(單一卦資料);
+            籤筒.put(newdatas[i][3],單一卦資料);
         }
+
     }
 
 
