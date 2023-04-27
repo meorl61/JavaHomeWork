@@ -2,8 +2,6 @@ package 存檔練習_觀音32籤;
 
 import 存檔練習_觀音32籤.畫面介面;
 
-import javax.swing.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main_Controller {
