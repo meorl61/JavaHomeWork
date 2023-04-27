@@ -1,5 +1,7 @@
 package 存檔練習_觀音32籤;
 
+import 存檔練習_觀音32籤.畫面介面;
+
 import javax.swing.*;
 import java.util.ArrayList;
 
@@ -8,18 +10,29 @@ public class Main_Controller {
 
     public static void main(String[] args) {
 
-        觀音靈課32籤1 = 讀資料();
+
+
+        畫面介面.Style();      //載入介面
+        畫面介面.PageMain();  //開啟主畫面
 
         String 占卦 = 自動搖卦(1);
 
+
+    }
+
+    public static void 顯示(String 卦爻){
+        觀音靈課32籤1 = 讀資料();
         for (觀音靈課_Model 讀檔a : 觀音靈課32籤1) {
-            if (讀檔a.卦爻.equals(占卦)) {
+            if (讀檔a.卦爻.equals(卦爻)) {
+                畫面介面.籤號文字塊.setText("你抽到 第 "+Integer.toString(讀檔a.籤號) + " 卦 "+讀檔a.吉凶 + " 卦");
+                畫面介面.卦名文字塊.setText(讀檔a.卦名);
+                畫面介面.卦詞文字塊.setText("卦詞: \n"+讀檔a.卦詞);
+                畫面介面.卦義文字塊.setText("卦義: \n"+讀檔a.卦義);
+
                 觀音靈課_View.顯示資料(讀檔a.籤號, 讀檔a.卦爻, 讀檔a.卦名, 讀檔a.吉凶, 讀檔a.卦詞, 讀檔a.卦義);
             }
         }
     }
-
-
     public static String 自動搖卦(int 第幾次) {
         int 擲骰 = (int) (Math.random() * 2);
         char resultstr = '○';

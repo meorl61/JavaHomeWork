@@ -33,7 +33,7 @@ public class Main_TestExtra {
         //取資料
         int 成績 = data.getIntExtra("成績");
         CharSequence 名字 = data.getCharSequenceExtra("名字");
-        ArrayList<Student> 陣列 = (ArrayList<Student>) data.getObjectExtra("陣列");
+        ArrayList<Student> 陣列 = data.getArrayListStudentExtra("陣列");
 
         System.out.println(成績);
         System.out.println(名字);
