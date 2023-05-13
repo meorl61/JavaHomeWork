@@ -12,7 +12,7 @@ public class Main_Controller {
 
       讀資料();  //只讀一次就可以
 
-      畫面介面.PageMain();  //開啟主畫面
+      //畫面介面.PageMain();  //開啟主畫面
 
         String 占卦 = 自動搖卦(1);
         顯示結果(占卦);
